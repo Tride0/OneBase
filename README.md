@@ -1,2 +1,22 @@
 # OneBase
-An operating system dedicated to stability and simple security that can be expanded on by other systems.
+
+## Principles
+- Customizable
+- Simple
+- Flexible
+- Server or Endpoint
+- Supports multiple install methods
+
+## To Do
+[ ] Kernel
+[ ] Bootloader
+[ ] Data System
+[ ] Folder System
+[ ] Process Handler
+[ ] Frame System
+[ ] Terminal System
+[ ] Workspace
+[ ] Data Explorer
+[ ] Data Editor
+[ ] System App
+[ ] Networking
