@@ -1,4 +1,5 @@
 # OneBase
+This is more for fun and for educational purposes for myself but if this turns out to be more then cool.
 
 ## Principles
 - Customizable
