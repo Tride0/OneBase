@@ -4,20 +4,20 @@ Going through my bachelor's program I learned more about the various operating s
 
 This project is more educational for me than anything, but if it turns into something bigger, then cool. Feel free to pitch me ideas to include in this.
 
-## Resources
+## Resources Used
 
 - [Linux From Scratch (LFS)](https://www.linuxfromscratch.org/lfs/)
 - [LFS Online Book](https://www.linuxfromscratch.org/lfs/view/stable/)
 
-## Principles
+## Design Principles
 
 - Customizable
 - Simple
 - Flexible
 - Endpoint and Server
-- Supports multiple install methods
+- Supports multiple software install methods
 
-## Standards
+## Coding Standards
 
 - No abbreviations
 - No hard coded values, all variables
@@ -48,18 +48,25 @@ This project is more educational for me than anything, but if it turns into some
 - [ ] Directory System
 - [ ] System Manager
 - [ ] Time System
-- [ ] Networking
-- [ ] Data Backups
+- [ ] Networking System
+- [ ] Data Backup System
+- [ ] Install Systems
 - [ ] Remote Configuration Manager
 
-## Notes
+## Design Notes
 
 ### Data Metadata
- - WhenCreated, WhenChanged, WhoCreated, WhoChangedLast, WhenSynced, isLocked, isDeleted
+ - **Properties:** WhenCreated, WhenChanged, WhoCreated, WhoChangedLast, WhenSynced, isLocked, isDeleted
+ - Not all Metadata is required
+ - Unfamiliar Metadata is kept
+ - Able to add Metadata to file or folder
 
 ### UID System
 
 - Everything has a UID
+- UIDs are Recyclable
+- UIDs are cataloged and search-able
+- Certain UID Ranges are purged on reboot (Example: Process UIDs)
 - **Base62:** 0-9, A-Z, a-z
 - **Format:** U-####-#### (8^62 = 218,340,105,584,895)
 - **Shortcut:** The character before the underscore (_) will be used as a filler for unspecified characters.
@@ -70,10 +77,11 @@ This project is more educational for me than anything, but if it turns into some
 - **Future:** D-# will be used for the shared Directory System, other letters may have purposes in the future.
 - **Reservations:**
 
-| Purpose   | Prefix |
-| --------- | ------ |
-| System    | U-0    |
-| Processes | U-1    |
+| Purpose | Prefix |
+| ------- | ------ |
+| System  | U-0    |
+| File    | U-1    |
+| Process | U-2    |
 
 ### Directory Service
 
@@ -83,3 +91,6 @@ This project is more educational for me than anything, but if it turns into some
 - Local Desktop - Can logon locally
 - Remote Terminal - Can access system via Terminal remotely
 - Remote Desktop - Can access system via Desktop remotely
+
+### Install Systems
+- git
