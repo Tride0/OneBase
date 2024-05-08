@@ -8,6 +8,8 @@ This project is more educational for me than anything, but if it turns into some
 
 - [Linux From Scratch (LFS)](https://www.linuxfromscratch.org/lfs/)
 - [LFS Online Book](https://www.linuxfromscratch.org/lfs/view/stable/)
+  - [Position](https://www.linuxfromscratch.org/lfs/view/stable/chapter02/creatingpartition.html)
+  - [rootFileSystem-FUSE](https://www.kernel.org/doc/html/next/filesystems/fuse.html)
 
 ## Design Principles
 
@@ -25,13 +27,13 @@ This project is more educational for me than anything, but if it turns into some
 - Single Responsibility Functions
 - System Functions are called by Functional Functions. Example:
     - Encrypt-Data
-        - DES
+        - DES, AES
 
 ## To Do
 
-- [ ] Kernel
-- [ ] BootLoader
-- [ ] Data System
+- [ ] Linux Kernel - xConfig
+- [ ] BootLoader Partition FileSystem - ext4 + GRUB
+- [ ] root Partition Filesystem - XFS + FUSE
 - [ ] Data Metadata
 - [ ] Folder System
 - [ ] UID System
@@ -40,7 +42,7 @@ This project is more educational for me than anything, but if it turns into some
 - [ ] Process Scheduler
 - [ ] Frame System
 - [ ] Terminal System
-- [ ] Encryption System
+- [ ] Encryption System - LUKS
 - [ ] Hash System
 - [ ] Workspace Application
 - [ ] Data Explorer Application
@@ -94,3 +96,4 @@ This project is more educational for me than anything, but if it turns into some
 
 ### Install Systems
 - git
+- chocolatey
